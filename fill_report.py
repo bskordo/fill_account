@@ -103,7 +103,75 @@ def write_infromation_into_file(my_file, information_from_json):
     work_sheet['E89'] = '-'
     work_sheet['G88'] = '-'
     work_sheet['G89'] = '-'
+    #БУХ ОТЧЕТ
+    count_sheet = work_book.worksheets[1]
+    #Нематериальные активы_1110
+    count_sheet['D8'] = information_from_json['principal']['accountability']['data']['fieldsets'][0]['groups'][0]['fields'][0]['values']['31.12.2017']
+    count_sheet['E8'] = information_from_json['principal']['accountability']['data']['fieldsets'][0]['groups'][0]['fields'][0]['values']['31.03.2018']
+    count_sheet['F8'] = information_from_json['principal']['accountability']['data']['fieldsets'][0]['groups'][0]['fields'][0]['values']['30.06.2018']
+    count_sheet['G8'] = information_from_json['principal']['accountability']['data']['fieldsets'][0]['groups'][0]['fields'][0]['values']['30.09.2018']
 
+    #Результаты исследований и разработок_1120
+    count_sheet['D9'] = information_from_json['principal']['accountability']['data']['fieldsets'][0]['groups'][0]['fields'][1]['values']['31.12.2017']
+    count_sheet['E9'] = information_from_json['principal']['accountability']['data']['fieldsets'][0]['groups'][0]['fields'][1]['values']['31.03.2018']
+    count_sheet['F9'] = information_from_json['principal']['accountability']['data']['fieldsets'][0]['groups'][0]['fields'][1]['values']['30.06.2018']
+    count_sheet['G9'] = information_from_json['principal']['accountability']['data']['fieldsets'][0]['groups'][0]['fields'][1]['values']['30.09.2018']
+
+    #Нематериальные поисковые активы_1130
+    count_sheet['D10'] = information_from_json['principal']['accountability']['data']['fieldsets'][0]['groups'][0]['fields'][2]['values']['31.12.2017']
+    count_sheet['E10'] = information_from_json['principal']['accountability']['data']['fieldsets'][0]['groups'][0]['fields'][2]['values']['31.03.2018']
+    count_sheet['F10'] = information_from_json['principal']['accountability']['data']['fieldsets'][0]['groups'][0]['fields'][2]['values']['30.06.2018']
+    count_sheet['G10'] = information_from_json['principal']['accountability']['data']['fieldsets'][0]['groups'][0]['fields'][2]['values']['30.09.2018']
+
+    #Запасы_1210
+    count_sheet['D13'] = information_from_json['principal']['accountability']['data']['fieldsets'][0]['groups'][1]['fields'][0]['values']['31.12.2017']
+    count_sheet['E13'] = information_from_json['principal']['accountability']['data']['fieldsets'][0]['groups'][1]['fields'][0]['values']['31.03.2018']
+    count_sheet['F13'] = information_from_json['principal']['accountability']['data']['fieldsets'][0]['groups'][1]['fields'][0]['values']['30.06.2018']
+    count_sheet['G13'] = information_from_json['principal']['accountability']['data']['fieldsets'][0]['groups'][1]['fields'][0]['values']['30.09.2018']
+    
+    #НДС по приобретенным ценностям 1220
+    count_sheet['D14'] = information_from_json['principal']['accountability']['data']['fieldsets'][0]['groups'][1]['fields'][1]['values']['31.12.2017']
+    count_sheet['E14'] = information_from_json['principal']['accountability']['data']['fieldsets'][0]['groups'][1]['fields'][1]['values']['31.03.2018']
+    count_sheet['F14'] = information_from_json['principal']['accountability']['data']['fieldsets'][0]['groups'][1]['fields'][1]['values']['30.06.2018']
+    count_sheet['G14'] = information_from_json['principal']['accountability']['data']['fieldsets'][0]['groups'][1]['fields'][1]['values']['30.09.2018']
+
+    #Резервный капитал_1360
+    count_sheet['D17'] = information_from_json['principal']['accountability']['data']['fieldsets'][1]['groups'][0]['fields'][4]['values']['31.12.2017']
+    count_sheet['E17'] = information_from_json['principal']['accountability']['data']['fieldsets'][1]['groups'][0]['fields'][4]['values']['31.03.2018']
+    count_sheet['F17'] = information_from_json['principal']['accountability']['data']['fieldsets'][1]['groups'][0]['fields'][4]['values']['30.06.2018']
+    count_sheet['G17'] = information_from_json['principal']['accountability']['data']['fieldsets'][1]['groups'][0]['fields'][4]['values']['30.09.2018']
+
+    #Нераспределенная прибыль (непокрытый убыток)_1370
+    count_sheet['D18'] = information_from_json['principal']['accountability']['data']['fieldsets'][1]['groups'][0]['fields'][5]['values']['31.12.2017']
+    count_sheet['E18'] = information_from_json['principal']['accountability']['data']['fieldsets'][1]['groups'][0]['fields'][5]['values']['31.03.2018']
+    count_sheet['F18'] = information_from_json['principal']['accountability']['data']['fieldsets'][1]['groups'][0]['fields'][5]['values']['30.06.2018']
+    count_sheet['G18'] = information_from_json['principal']['accountability']['data']['fieldsets'][1]['groups'][0]['fields'][5]['values']['30.09.2018']
+
+    #Заёмные средства   1410
+    count_sheet['D21'] = information_from_json['principal']['accountability']['data']['fieldsets'][1]['groups'][1]['fields'][0]['values']['31.12.2017']
+    count_sheet['E21'] = information_from_json['principal']['accountability']['data']['fieldsets'][1]['groups'][1]['fields'][0]['values']['31.03.2018']
+    count_sheet['F21'] = information_from_json['principal']['accountability']['data']['fieldsets'][1]['groups'][1]['fields'][0]['values']['30.06.2018']
+    count_sheet['G21'] = information_from_json['principal']['accountability']['data']['fieldsets'][1]['groups'][1]['fields'][0]['values']['30.09.2018']
+    
+    #Отложенные налоговые обязательства_1420
+    count_sheet['D22'] = information_from_json['principal']['accountability']['data']['fieldsets'][1]['groups'][1]['fields'][1]['values']['31.12.2017']
+    count_sheet['E22'] = information_from_json['principal']['accountability']['data']['fieldsets'][1]['groups'][1]['fields'][1]['values']['31.03.2018']
+    count_sheet['F22'] = information_from_json['principal']['accountability']['data']['fieldsets'][1]['groups'][1]['fields'][1]['values']['30.06.2018']
+    count_sheet['G22'] = information_from_json['principal']['accountability']['data']['fieldsets'][1]['groups'][1]['fields'][1]['values']['30.09.2018']
+
+    #Оценочные обязательства_1430
+    count_sheet['D23'] = information_from_json['principal']['accountability']['data']['fieldsets'][1]['groups'][1]['fields'][2]['values']['31.12.2017']
+    count_sheet['E23'] = information_from_json['principal']['accountability']['data']['fieldsets'][1]['groups'][1]['fields'][2]['values']['31.03.2018']
+    count_sheet['F23'] = information_from_json['principal']['accountability']['data']['fieldsets'][1]['groups'][1]['fields'][2]['values']['30.06.2018']
+    count_sheet['G23'] = information_from_json['principal']['accountability']['data']['fieldsets'][1]['groups'][1]['fields'][2]['values']['30.09.2018']
+
+    #Прочие обязательства_1450
+    count_sheet['D26'] = information_from_json['principal']['accountability']['data']['fieldsets'][1]['groups'][1]['fields'][3]['values']['31.12.2017']
+    count_sheet['E26'] = information_from_json['principal']['accountability']['data']['fieldsets'][1]['groups'][1]['fields'][3]['values']['31.03.2018']
+    count_sheet['F26'] = information_from_json['principal']['accountability']['data']['fieldsets'][1]['groups'][1]['fields'][3]['values']['30.06.2018']
+    count_sheet['G26'] = information_from_json['principal']['accountability']['data']['fieldsets'][1]['groups'][1]['fields'][3]['values']['30.09.2018']
+
+    #КОНЕЦ БУХ ОТЧЕТА
 
 
 
