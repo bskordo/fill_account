@@ -16,7 +16,7 @@ def load_json_data(filepath):
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('file_which_need_to_fill', help='A file which contains addresses')
+    parser.add_argument('file_which_need_to_fill', help='file_which_need_to_fill')
     arg = parser.parse_args()
     return arg.file_with_address
 
